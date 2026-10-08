@@ -23,9 +23,9 @@ Puis visiter <http://localhost:8000>.
 3. Sous **Build and deployment**, choisir **Deploy from a branch**, sélectionner la branche `main` et le dossier `/ (root)`, puis enregistrer.
 4. Le site est publié à `https://<utilisateur>.github.io/<dépôt>/`.
 
-### Domaine personnalisé (optionnel)
+### Domaine personnalisé
 
-Pour servir le site sur `malardconstruction.com`, ajouter un fichier `CNAME` à la racine du dépôt contenant le domaine, configurer les enregistrements DNS selon la [documentation GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site), puis activer **Enforce HTTPS** dans les paramètres Pages.
+Le fichier `CNAME` à la racine déclare le domaine `malardconstruction.com`. Il reste à configurer les enregistrements DNS selon la [documentation GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site), puis à activer **Enforce HTTPS** dans les paramètres Pages.
 
 ## Contact
 
