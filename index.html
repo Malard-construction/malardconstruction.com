@@ -4,35 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Malard Construction inc. | Site en construction</title>
-  <meta name="description" content="Le site de Malard Construction inc. est en construction. Revenez bientôt.">
+  <meta name="description" content="Malard Construction inc., rénovation haut de gamme. Notre nouveau site est en construction. Revenez bientôt.">
   <style>
     :root {
-      --yellow: #ffc107;
-      --dark: #1e1e1e;
-      --steel: #2b2f33;
-      --light: #f4f1ea;
+      --ink: #14161a;
+      --charcoal: #1c1f24;
+      --brass: #b8975a;
+      --brass-light: #d9bf8a;
+      --cream: #f3eee4;
+      --muted: #a9a496;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
     body {
-      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--steel);
-      color: var(--light);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(ellipse at 50% 0%, #2a2d33 0%, var(--ink) 70%);
+      color: var(--cream);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      background-image:
-        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-      background-size: 40px 40px;
     }
-    .hazard {
-      height: 28px;
-      background: repeating-linear-gradient(-45deg, var(--yellow) 0 24px, var(--dark) 24px 48px);
-      flex-shrink: 0;
-    }
-    main {
+    .frame {
       flex: 1;
+      margin: 1.25rem;
+      border: 1px solid rgba(184, 151, 90, .45);
+      outline: 1px solid rgba(184, 151, 90, .2);
+      outline-offset: 6px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -41,124 +38,128 @@
       padding: 3rem 1.5rem;
     }
     .logo {
-      font-weight: 900;
-      letter-spacing: .3em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      letter-spacing: .38em;
       text-transform: uppercase;
-      font-size: 1rem;
-      color: var(--yellow);
-      border: 3px solid var(--yellow);
-      padding: .5rem 1.2rem;
-      margin-bottom: 2.5rem;
+      color: var(--brass-light);
     }
-    .crane { width: min(320px, 70vw); margin-bottom: 1.5rem; }
+    .logo small {
+      display: block;
+      margin-top: .5rem;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: .7rem;
+      letter-spacing: .5em;
+      color: var(--muted);
+    }
+    .rule {
+      width: 64px;
+      height: 1px;
+      background: var(--brass);
+      margin: 2.2rem auto;
+    }
+    .arch { width: min(150px, 40vw); margin-bottom: 2rem; }
     h1 {
-      font-size: clamp(2.2rem, 7vw, 4.5rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      line-height: 1.05;
-      letter-spacing: .04em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(2.1rem, 6vw, 4rem);
+      line-height: 1.15;
+      letter-spacing: .02em;
     }
-    h1 span { color: var(--yellow); }
+    h1 em { color: var(--brass-light); font-style: italic; }
     p.lead {
-      max-width: 36rem;
-      margin: 1.5rem auto 2rem;
-      font-size: 1.15rem;
-      line-height: 1.6;
-      color: #d6d2c8;
+      max-width: 34rem;
+      margin: 1.5rem auto 0;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--muted);
     }
-    .sign {
-      background: var(--yellow);
-      color: var(--dark);
-      font-weight: 800;
+    .tagline {
+      margin-top: 2rem;
+      font-size: .75rem;
+      letter-spacing: .35em;
       text-transform: uppercase;
-      letter-spacing: .12em;
-      padding: .8rem 1.8rem;
-      border: 4px solid var(--dark);
-      outline: 4px solid var(--yellow);
-      transform: rotate(-1.5deg);
+      color: var(--brass);
     }
     .progress {
-      width: min(420px, 80vw);
-      height: 14px;
-      background: var(--dark);
-      border: 2px solid var(--yellow);
-      margin-top: 2.5rem;
+      width: min(260px, 70vw);
+      height: 2px;
+      margin: 2.5rem auto 0;
+      background: rgba(184, 151, 90, .25);
       overflow: hidden;
     }
     .progress div {
+      width: 40%;
       height: 100%;
-      width: 65%;
-      background: repeating-linear-gradient(-45deg, var(--yellow) 0 12px, #e0a800 12px 24px);
-      animation: slide 1.2s linear infinite;
-      background-size: 34px 34px;
+      background: linear-gradient(90deg, transparent, var(--brass-light), transparent);
+      animation: sweep 2.4s ease-in-out infinite;
     }
-    @keyframes slide { to { background-position: 34px 0; } }
-    .contact { margin-top: 2rem; color: #d6d2c8; }
+    @keyframes sweep {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(250%); }
+    }
+    .contact { margin-top: 2.5rem; color: var(--muted); font-size: .95rem; }
     .contact a {
-      color: var(--yellow);
-      font-weight: 700;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      display: inline-block;
+      margin-top: .4rem;
+      color: var(--cream);
+      text-decoration: none;
+      letter-spacing: .08em;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--brass);
+      transition: color .2s, border-color .2s;
     }
-    .contact a:hover, .contact a:focus-visible { color: #fff; }
+    .contact a:hover, .contact a:focus-visible {
+      color: var(--brass-light);
+      border-color: var(--brass-light);
+    }
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: .85rem;
-      color: #9a9a9a;
-      background: var(--dark);
+      padding: 0 1rem 1.5rem;
+      font-size: .78rem;
+      letter-spacing: .08em;
+      color: #6f6c62;
     }
     @media (prefers-reduced-motion: reduce) {
-      .progress div { animation: none; }
+      .progress div { animation: none; transform: translateX(75%); }
     }
   </style>
 </head>
 <body>
-  <div class="hazard" aria-hidden="true"></div>
-
-  <main>
+  <main class="frame">
     <div class="logo">Malard Construction inc.</div>
 
-    <svg class="crane" viewBox="0 0 320 200" role="img" aria-label="Illustration d'une grue de construction">
-      <g fill="none" stroke="#ffc107" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
-        <!-- tower -->
-        <path d="M120 190 V40 M150 190 V40 M120 70 L150 40 M120 100 L150 70 M120 130 L150 100 M120 160 L150 130 M120 190 L150 160"/>
-        <!-- jib -->
-        <path d="M60 40 H290 M60 40 L135 10 L225 40 M135 10 V40"/>
-        <!-- counterweight -->
-        <rect x="52" y="40" width="22" height="22" fill="#ffc107"/>
-        <!-- cable and hook -->
-        <path d="M260 40 V110"/>
-        <path d="M260 110 v8 a7 7 0 1 1 -7 7"/>
+    <div class="rule" aria-hidden="true"></div>
+
+    <svg class="arch" viewBox="0 0 120 160" role="img" aria-label="Illustration d'une fenêtre en arche">
+      <g fill="none" stroke="#b8975a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 156 V60 a50 50 0 0 1 100 0 V156 Z"/>
+        <path d="M24 148 V62 a36 36 0 0 1 72 0 V148 Z"/>
+        <path d="M60 26 V148 M24 88 H96"/>
+        <path d="M2 156 H118"/>
       </g>
-      <!-- load -->
-      <rect x="236" y="135" width="48" height="26" fill="#ffc107"/>
-      <path d="M240 135 L260 118 L280 135" fill="none" stroke="#ffc107" stroke-width="2"/>
-      <!-- ground -->
-      <rect x="0" y="190" width="320" height="6" fill="#ffc107"/>
     </svg>
 
-    <h1>Site <span>en</span><br>construction</h1>
+    <h1>Un nouveau chapitre<br><em>est en construction</em></h1>
 
     <p class="lead">
-      Nous travaillons fort pour bâtir quelque chose de solide. Notre
-      nouveau site sera bientôt en ligne. D'ici là, nous continuons de
-      réaliser de beaux projets.
+      Notre site est en cours de rénovation. Nous y mettons le même soin du
+      détail et le même souci de la perfection que dans chacun de nos projets.
+      Il sera bientôt en ligne.
     </p>
 
-    <div class="sign">Casque obligatoire &mdash; de retour bientôt</div>
-
-    <p class="contact">
-      Une question? Écrivez-nous&nbsp;:
-      <a href="mailto:info@malardconstruction.com">info@malardconstruction.com</a>
-    </p>
+    <div class="tagline">Bientôt disponible</div>
 
     <div class="progress" role="progressbar" aria-label="Progression des travaux" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
       <div></div>
     </div>
+
+    <p class="contact">
+      Un projet en tête? Écrivez-nous&nbsp;:<br>
+      <a href="mailto:info@malardconstruction.com">info@malardconstruction.com</a>
+    </p>
   </main>
 
-  <div class="hazard" aria-hidden="true"></div>
   <footer>&copy; <span id="y">2026</span> Malard Construction inc. Tous droits réservés.</footer>
 
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>

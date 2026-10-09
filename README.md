@@ -1,6 +1,6 @@
 # Malard Construction inc.
 
-Page statique « site en construction » pour Malard Construction inc.
+Page statique « site en construction » pour Malard Construction inc., entreprise de rénovation haut de gamme.
 
 ## Structure
 
